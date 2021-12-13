@@ -14,22 +14,13 @@ const App = () => {
 
 
   const [tasks, setTasks] = useState([
-      {
-        id: 1,
-        title: 'Estudar Programação',
-        completed: false,
-      },
-      {
-        id: 2,
-        title: 'Ler Livros',
-        completed: true,
-      },
+   
     ]
   );
 
   useEffect(() => {
     const fetchTasks = async () =>{
-      const { data } = await axios.get('https://jsonplaceholder.cypress.io/todos?_limit=10')
+      const { data } = await axios.get('https://jsonplaceholder.cypress.io/todos?_limit=0')
       setTasks(data);
     };
 
